@@ -1,2 +1,4 @@
-var alphabet = "123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ";
-var base = alphabet.length; //58
+$(document).ready(function(){
+    var long_url = $("#url-field");
+})
+
