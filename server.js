@@ -1,12 +1,16 @@
 var express = require('express');
 var app = express();
+//var mongo= require('mongodb').MongoClient;
+var path = require('path');
 
 //configure app
-//add middleware
-//define routes
+//tell express to serve files in the public folder
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function(req,res){
-    res.send('');
+//serve homepage (index.html)
+app.get('/', function(req,res){ 
+    //route to serve homepage
+    res.sendFile(path.join(__dirname, 'views/index.html'));
 });
 
 app.listen(8080, function(){
